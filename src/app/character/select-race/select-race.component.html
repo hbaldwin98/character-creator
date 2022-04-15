@@ -1,0 +1,23 @@
+<!--? if a race has not been selected, display available race options-->
+<div class="row mx-auto mt-2" *ngIf="!hasSelected">
+  <!-- ! add section where if a race has been chosen, but not selected, show currently chosen race -->
+  <h1 class="text-center">Select your race</h1>
+  <div class="col-4 col-md-3 my-2" *ngFor="let race of races">
+    <button class="btn p-0">
+      <div class="card bg-dark text-white">
+        <img class="card-img" src="assets/placeholder.webp" alt="Card image" />
+        <div
+          class="card-img-overlay d-flex justify-content-center align-items-center"
+        >
+          <h5 class="card-title" *ngIf="race.isSubrace; else noSubrace">
+            {{ race.name + " (" + race.subrace + ")" }}
+          </h5>
+          <ng-template #noSubrace>
+            <h5 class="card-title">{{ race.name }}</h5>
+          </ng-template>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+<!--? if a race has been selected, display race features, traits, etc.-->
