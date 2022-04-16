@@ -6,16 +6,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CharacterService {
-  character!: Character[];
+  character = new Character();
   races!: Race[];
 
   constructor() {}
 
-  async getRaces() {
+  async getRaces(): Promise<Race[]> {
     let json = await fetch("assets/races.json")
         .then(response => response.json())
         .then(json => json);
-    console.log(json);
+
     return json;
+  }
+
+  setRace(race: Race): void {
+    this.character.race = race;
   }
 }

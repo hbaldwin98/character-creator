@@ -1,10 +1,10 @@
 export interface racialTrait {
   name:         string,
-  displayOrder: number,
+  shortDesc:    string,
   description:  string,
-  toolTip:      string,
-  hideBuilder:  boolean,
-  hideSheet:    boolean,
+  toolTip?:      string,
+  hideBuilder?:  boolean,
+  hideSheet?:    boolean,
   resistance?:   string[],
   proficiency?:  {
     armor?:  string[],

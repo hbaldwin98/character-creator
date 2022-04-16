@@ -15,4 +15,20 @@ export class BuilderComponent implements OnInit {
   setCurrent(num: number): void {
     this.current = num;
   }
+
+  goBack(): void {
+    if (this.current === 0) {
+      return ;
+    }
+
+    this.current--;
+  }
+
+  goForward(): void {
+    if (this.current === 6) {
+      return ;
+    }
+
+    this.current++;
+  }
 }

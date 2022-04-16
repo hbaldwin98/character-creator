@@ -396,10 +396,4 @@ export class Character implements ICharacter {
   };
   background = "";
   journal = "";
-
-
-  constructor(race: Race, charClass: Class) {
-    this.race = race;
-    this.class = charClass;
-  }
 }

@@ -2,6 +2,7 @@ import { racialTrait } from './racialTrait';
 
 export interface Race {
     name:             string,
+    image?:            string,
     isSubrace:        boolean,
     subrace?:         string,
     languages:        string[],
@@ -23,7 +24,7 @@ export interface Race {
       swim?:   number,
       climb?:  number
     },
-    racialTrait: racialTrait[],
+    racialTraits: racialTrait[],
     description?: string[] | string,
     numFeat: number,
     feats?:    string[],

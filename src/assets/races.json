@@ -2,6 +2,7 @@
   {
     "name": "Human",
     "languages": ["common"],
+    "image": "assets/human.webp",
     "isSubrace": false,
     "extraLang": 1,
     "proficiencies": 0,
@@ -14,18 +15,30 @@
       "cha": 1,
       "choose": 0
     },
-    "description": "<h2>Human</h2>\n  <p>Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the\n    innovators, the achievers, and the pioneers of the worlds. </p>\n  <hr>\n  <h4>Racial Traits</h4>\n  <p><em>+1 to All Ability Scores, Extra Language</em></p>\n  <hr>\n  <h5>Ability Score Increase</h5>\n  <p>Your ability scores each increase by 1.</p>\n  <hr>\n  <h5>Languages</h5>\n  <p>You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of\n    other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed\n    from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.</p>\n  ",
+    "description": "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds. ",
     "speed": { "walk": 30 },
     "isHomebrew": false,
-    "racialTraits": [],
+    "racialTraits": [
+      {
+        "name": "Ability Score Increase",
+        "shortDesc": "+1 to All Ability Scores",
+        "description": "Your ability scores each increase by 1."
+      },
+      {
+        "name": "Languages",
+        "shortDesc": "Extra Language",
+        "description": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on."
+      }
+    ],
     "extraFeat": 0,
     "srd": true
   },
   {
     "name": "Human",
+    "languages": ["common"],
+    "image": "assets/humanv.webp",
     "isSubrace": true,
     "subrace": "Variant",
-    "languages": ["common"],
     "extraLang": 1,
     "proficiencies": 1,
     "asi": {
@@ -37,79 +50,31 @@
       "cha": 0,
       "choose": 2
     },
-    "description": "<h2>Human</h2>\n  <p>Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the\n    innovators, the achievers, and the pioneers of the worlds. </p>\n  <hr>\n  <h4>Racial Traits</h4>\n  <p><em>+1 to All Ability Scores, Extra Language</em></p>\n  <hr>\n  <h5>Ability Score Increase</h5>\n  <p>Your ability scores each increase by 1.</p>\n  <hr>\n  <h5>Languages</h5>\n  <p>You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of\n    other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed\n    from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.</p>\n  ",
+    "description": "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds. ",
     "speed": { "walk": 30 },
     "isHomebrew": false,
-    "racialTraits": [],
-    "extraFeat": 1,
-    "srd": true
-  },
-  {
-    "name": "Human",
-    "isSubrace": true,
-    "subrace": "Variant",
-    "languages": ["common"],
-    "extraLang": 1,
-    "proficiencies": 1,
-    "asi": {
-      "str": 0,
-      "dex": 0,
-      "con": 0,
-      "int": 0,
-      "wis": 0,
-      "cha": 0,
-      "choose": 2
-    },
-    "description": "<h2>Human</h2>\n  <p>Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the\n    innovators, the achievers, and the pioneers of the worlds. </p>\n  <hr>\n  <h4>Racial Traits</h4>\n  <p><em>+1 to All Ability Scores, Extra Language</em></p>\n  <hr>\n  <h5>Ability Score Increase</h5>\n  <p>Your ability scores each increase by 1.</p>\n  <hr>\n  <h5>Languages</h5>\n  <p>You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of\n    other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed\n    from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.</p>\n  ",
-    "speed": { "walk": 30 },
-    "isHomebrew": false,
-    "racialTraits": [],
-    "extraFeat": 1,
-    "srd": true
-  },
-  {
-    "name": "Human",
-    "isSubrace": true,
-    "subrace": "Variant",
-    "languages": ["common"],
-    "extraLang": 1,
-    "proficiencies": 1,
-    "asi": {
-      "str": 0,
-      "dex": 0,
-      "con": 0,
-      "int": 0,
-      "wis": 0,
-      "cha": 0,
-      "choose": 2
-    },
-    "description": "<h2>Human</h2>\n  <p>Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the\n    innovators, the achievers, and the pioneers of the worlds. </p>\n  <hr>\n  <h4>Racial Traits</h4>\n  <p><em>+1 to All Ability Scores, Extra Language</em></p>\n  <hr>\n  <h5>Ability Score Increase</h5>\n  <p>Your ability scores each increase by 1.</p>\n  <hr>\n  <h5>Languages</h5>\n  <p>You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of\n    other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed\n    from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.</p>\n  ",
-    "speed": { "walk": 30 },
-    "isHomebrew": false,
-    "racialTraits": [],
-    "extraFeat": 1,
-    "srd": true
-  },
-  {
-    "name": "Human",
-    "isSubrace": true,
-    "subrace": "Variant",
-    "languages": ["common"],
-    "extraLang": 1,
-    "proficiencies": 1,
-    "asi": {
-      "str": 0,
-      "dex": 0,
-      "con": 0,
-      "int": 0,
-      "wis": 0,
-      "cha": 0,
-      "choose": 2
-    },
-    "description": "<h2>Human</h2>\n  <p>Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the\n    innovators, the achievers, and the pioneers of the worlds. </p>\n  <hr>\n  <h4>Racial Traits</h4>\n  <p><em>+1 to All Ability Scores, Extra Language</em></p>\n  <hr>\n  <h5>Ability Score Increase</h5>\n  <p>Your ability scores each increase by 1.</p>\n  <hr>\n  <h5>Languages</h5>\n  <p>You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of\n    other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed\n    from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.</p>\n  ",
-    "speed": { "walk": 30 },
-    "isHomebrew": false,
-    "racialTraits": [],
+    "racialTraits": [
+      {
+        "name": "Ability Score Increase",
+        "shortDesc": "+1 to Two Ability Scores",
+        "description": "Two ability scores of your choice are increased by 1."
+      },
+      {
+        "name": "Feat",
+        "shortDesc": "Extra Feat",
+        "description": "You gain one feat of your choice."
+      },
+      {
+        "name": "Languages",
+        "shortDesc": "Extra Language",
+        "description": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on."
+      },
+      {
+        "name": "Skills",
+        "shortDesc": "Extra Skill Proficiency",
+        "description": "You gain proficiency in one skill of your choice."
+      }
+    ],
     "extraFeat": 1,
     "srd": true
   }
