@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,8 @@ import { RaceSelectModalComponent } from './character/race-select-modal/race-sel
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SelectClassComponent } from './character/select-class/select-class.component';
 import { ClassSelectModalComponent } from './character/class-select-modal/class-select-modal.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { BuilderHomeComponent } from './character/builder-home/builder-home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { ClassSelectModalComponent } from './character/class-select-modal/class-
     RaceSelectModalComponent,
     SelectClassComponent,
     ClassSelectModalComponent,
+    BuilderHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { ClassSelectModalComponent } from './character/class-select-modal/class-
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     AccordionModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

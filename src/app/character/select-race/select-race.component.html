@@ -82,13 +82,14 @@
 
   <h3 class="mb-3">Select Your Race</h3>
   <hr />
-  <div class="race col-4 col-md-3 my-2 d-flex justify-content-center align-items-center" *ngFor="let race of races">
+  <div class="race col-4 col-md-3 my-3 d-flex justify-content-center align-items-center" *ngFor="let race of races">
     <button type="button" class="btn p-0" (click)="raceSelectModal(race)">
       <div class="card d-flex bg-dark text-white">
         <img
           class="card-img"
           src="{{ race.image || 'assets/placeholder.webp' }}"
-          alt="Card image"
+          alt="{{race.name}} image"
+          style="width: 128px; height: 128px"style="width: 128px; height: 128px"
         />
         <div class="card-img-overlay d-flex justify-content-center">
           <h5 class="card-title" *ngIf="race.isSubrace; else noSubrace">

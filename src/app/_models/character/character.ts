@@ -1,221 +1,222 @@
-import { Class } from "./class";
-import { Equipment } from "./equipment";
-import { Feat } from "./feat";
-import { Race } from "./race";
-import { Spell } from "./spell";
-import { Weapon } from "./weapon";
+import { Class } from './class';
+import { Equipment } from './equipment';
+import { Feat } from './feat';
+import { Race } from './race';
+import { Spell } from './spell';
+import { Weapon } from './weapon';
 
 export interface ICharacter {
-  name: string,
-  level: number,
-  class: Class,
-  race: Race,
-  alignment: string,
-  experience?: number,
-  milestone: boolean,
-  personality?: string[],
-  ideals?: string[],
-  flaws?: string[],
-  languages: string[],
-  inspiration: boolean,
-  profBonus: number,
-  maxHP: number,
-  currentHP: number,
-  tempHP: number,
+  name: string;
+  level: number;
+  class: Class;
+  race: Race;
+  alignment: string;
+  experience?: number;
+  milestone: boolean;
+  personality?: string[];
+  ideals?: string[];
+  flaws?: string[];
+  languages: string[];
+  inspiration: boolean;
+  profBonus: number;
+  maxHP: number;
+  currentHP: number;
+  tempHP: number;
+  hpOveride: number;
   deathSaves: {
-    success: number,
-    failure: number,
-  },
+    success: number;
+    failure: number;
+  };
   asi: {
     str: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
     dex: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
     con: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
     int: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
     wis: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
     cha: {
-      val: number,
-      mod: number,
-      save: number,
-      prof: boolean
-    },
-  },
+      val: number;
+      mod: number;
+      save: number;
+      prof: boolean;
+    };
+  };
   skills: {
     acrobatics: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     animal: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     athletics: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     deception: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     history: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     insight: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     intimidation: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     investigation: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     medicine: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     nature: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     perception: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     performance: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     persuasion: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     religion: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     sleightofhand: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     stealth: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
     survival: {
-      val: number,
-      prof: boolean,
-      ability: string,
-    },
-  },
-  ac: number,
-  initiative: number,
-  speed: number[],
-  armorOverride: boolean,
-  armorVal: number,
-  feats?: Feat[],
-  weapons?: Weapon[],
-  armor?: Equipment[],
+      val: number;
+      prof: boolean;
+      ability: string;
+    };
+  };
+  ac: number;
+  initiative: number;
+  speed: number[];
+  armorOverride: boolean;
+  armorVal: number;
+  feats?: Feat[];
+  weapons?: Weapon[];
+  armor?: Equipment[];
   spells?: {
-    cantrip: Spell[],
-    1: Spell[],
-    2: Spell[],
-    3: Spell[],
-    4: Spell[],
-    5: Spell[],
-    6: Spell[],
-    7: Spell[],
-    8: Spell[],
-    9: Spell[],
-  },
-  spellClass?: string,
-  spellDC?: number,
-  spellASI?: string,
-  spellBonus?: number,
+    cantrip: Spell[];
+    1: Spell[];
+    2: Spell[];
+    3: Spell[];
+    4: Spell[];
+    5: Spell[];
+    6: Spell[];
+    7: Spell[];
+    8: Spell[];
+    9: Spell[];
+  };
+  spellClass?: string;
+  spellDC?: number;
+  spellASI?: string;
+  spellBonus?: number;
   spellSlots?: {
-    cantrip: number,
-    1: number,
-    2: number,
-    3: number,
-    4: number,
-    5: number,
-    6: number,
-    7: number,
-    8: number,
-    9: number,
-  },
+    cantrip: number;
+    1: number;
+    2: number;
+    3: number;
+    4: number;
+    5: number;
+    6: number;
+    7: number;
+    8: number;
+    9: number;
+  };
   gold: {
-    cp: number,
-    sp: number,
-    ep: number,
-    gp: number,
-    pp: number,
-  },
-  background: string,
-  journal: string
+    cp: number;
+    sp: number;
+    ep: number;
+    gp: number;
+    pp: number;
+  };
+  background: string;
+  journal: string;
 }
 
-
 export class Character implements ICharacter {
-  name = "";
-  level = 0;
+  name = '';
+  level = 1;
   class = {} as Class;
   race = {} as Race;
-  alignment = "";
-  experience?= 0;
-  milestone = false;
-  personality?= [];
-  ideals?= [];
-  flaws?= [];
+  alignment = '';
+  experience? = 0;
+  milestone = true;
+  personality? = [];
+  ideals? = [];
+  flaws? = [];
   languages = [];
   inspiration = false;
   profBonus = 0;
   maxHP = 0;
   currentHP = 0;
   tempHP = 0;
+  hpOveride = 0;
   deathSaves = {
     success: 0,
     failure: 0,
@@ -226,140 +227,140 @@ export class Character implements ICharacter {
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
     dex: {
       order: 2,
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
     con: {
       order: 3,
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
     int: {
       order: 4,
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
     wis: {
       order: 5,
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
     cha: {
       order: 6,
       val: 10,
       mod: 0,
       save: 0,
-      prof: false
+      prof: false,
     },
   };
   skills = {
     acrobatics: {
       val: 0,
       prof: false,
-      ability: "dex",
+      ability: 'dex',
     },
     animal: {
       val: 0,
       prof: false,
-      ability: "wis",
+      ability: 'wis',
     },
     athletics: {
       val: 0,
       prof: false,
-      ability: "str",
+      ability: 'str',
     },
     deception: {
       val: 0,
       prof: false,
-      ability: "cha",
+      ability: 'cha',
     },
     history: {
       val: 0,
       prof: false,
-      ability: "int",
+      ability: 'int',
     },
     insight: {
       val: 0,
       prof: false,
-      ability: "wis",
+      ability: 'wis',
     },
     intimidation: {
       val: 0,
       prof: false,
-      ability: "cha",
+      ability: 'cha',
     },
     investigation: {
       val: 0,
       prof: false,
-      ability: "int",
+      ability: 'int',
     },
     medicine: {
       val: 0,
       prof: false,
-      ability: "wis",
+      ability: 'wis',
     },
     nature: {
       val: 0,
       prof: false,
-      ability: "int",
+      ability: 'int',
     },
     perception: {
       val: 0,
       prof: false,
-      ability: "wis",
+      ability: 'wis',
     },
     performance: {
       val: 0,
       prof: false,
-      ability: "cha",
+      ability: 'cha',
     },
     persuasion: {
       val: 0,
       prof: false,
-      ability: "cha",
+      ability: 'cha',
     },
     religion: {
       val: 0,
       prof: false,
-      ability: "int",
+      ability: 'int',
     },
     sleightofhand: {
       val: 0,
       prof: false,
-      ability: "dex",
+      ability: 'dex',
     },
     stealth: {
       val: 0,
       prof: false,
-      ability: "dex",
+      ability: 'dex',
     },
     survival: {
       val: 0,
       prof: false,
-      ability: "wis",
-    }
+      ability: 'wis',
+    },
   };
   ac = 10;
   initiative = 0;
   speed = [];
   armorOverride = false;
   armorVal = 0;
-  feats?= [];
-  weapons?= [];
-  armor?= [];
-  spells?= {
+  feats? = [];
+  weapons? = [];
+  armor? = [];
+  spells? = {
     cantrip: [],
     1: [],
     2: [],
@@ -371,11 +372,11 @@ export class Character implements ICharacter {
     8: [],
     9: [],
   };
-  spellClass?= "";
-  spellDC?= 0;
-  spellASI?= "";
-  spellBonus?= 0;
-  spellSlots?= {
+  spellClass? = '';
+  spellDC? = 0;
+  spellASI? = '';
+  spellBonus? = 0;
+  spellSlots? = {
     cantrip: 0,
     1: 0,
     2: 0,
@@ -394,6 +395,6 @@ export class Character implements ICharacter {
     gp: 0,
     pp: 0,
   };
-  background = "";
-  journal = "";
+  background = '';
+  journal = '';
 }

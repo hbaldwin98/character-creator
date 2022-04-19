@@ -37,7 +37,7 @@ export class SelectRaceComponent implements OnInit {
         race,
       },
       class:
-        'modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down',
+        'modal-dialog-centered modal-fullscreen-md-down',
     };
     this.raceModal = this.modalService.show(
       RaceSelectModalComponent,

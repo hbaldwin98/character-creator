@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Barbarian",
+    "description": "A fierce warrior of primitive background who can enter a battle rage.",
+    "equipmentDesc": [
+      "You start with the following equipment, in addition to the equipment granted by your background.",
+      "(a) a greataxe or (b) any martial melee weapon",
+      "(a) two handaxes or (b) any simple melee weapon",
+      "An explorer's pack and four javelins."
+    ],
+    "primaryAbility": "Strength",
+    "saves": ["Strength", "Constitution"],
+    "image": "assets/barbarian.webp",
+    "classFeatures": [
+      {
+        "name": "Rage",
+        "description": "ENRAGED!",
+        "level": 1
+      }
+    ],
+    "hitDice": 12,
+    "isHomebrew": false,
+    "canCastSpells": false,
+    "proficiencies": {
+      "armor": {
+        "display": "Light armor, medium armor, shields",
+        "prof": ["light, medium", "shields"]
+      },
+      "weapons": {
+        "display": "Simple weapons, martial weapons",
+        "prof": ["simple", "martial"]
+      },
+      "skills": {
+        "display": "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
+        "num": 2,
+        "choices": ["animal", "athletics", "intimidation", "nature", "perception", "survival"],
+        "prof": []
+      }
+    }
+  }
+]
