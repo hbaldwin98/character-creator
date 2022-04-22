@@ -120,7 +120,8 @@
               >Level {{ feat.level }}</small
             >
           </button>
-          {{ feat.description }}
+          <div [class.show]="show" [ngClass]="feat.description.length > 100 ? 'hidden-text' : ''"> {{ feat.description }} </div>
+          <button class="btn" (click)="show = !show" style="color: blue" *ngIf="feat.description.length > 100">{{ show ? 'Show less': 'Show More' }}</button>
         </accordion-group>
       </span>
     </accordion>

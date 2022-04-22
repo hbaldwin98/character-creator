@@ -25,7 +25,6 @@ export interface Class {
     skills?: {
       display: string;
       choices: string[];
-      prof: string[];
       num: number;
      };
   };

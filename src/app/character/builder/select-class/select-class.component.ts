@@ -16,6 +16,7 @@ export class SelectClassComponent implements OnInit {
   selectedClass!: Class;
   classModal!: BsModalRef;
   character!: Character;
+  show: boolean = false;
 
   constructor(
     private characterService: CharacterService,

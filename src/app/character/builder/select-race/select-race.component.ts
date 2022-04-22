@@ -13,6 +13,7 @@ export class SelectRaceComponent implements OnInit {
   hasSelected: boolean = false;
   selectedRace?: Race;
   raceModal!: BsModalRef;
+  show: boolean = false;
 
   constructor(
     private characterService: CharacterService,

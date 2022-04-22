@@ -10,6 +10,7 @@ import { Race } from 'src/app/_models/character/race';
 export class RaceSelectModalComponent implements OnInit {
   event: EventEmitter<any> = new EventEmitter();
   race!: Race;
+  show: boolean = false;
 
   constructor( private modalService: BsModalService) { }
 

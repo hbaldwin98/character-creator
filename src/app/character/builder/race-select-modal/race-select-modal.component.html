@@ -14,16 +14,21 @@
     <p>{{ race.description }}</p>
 
     <h5>Racial Traits</h5>
-    <small class="text-muted" *ngFor="let trait of race.racialTraits; let last = last"
+    <small
+      class="text-muted"
+      *ngFor="let trait of race.racialTraits; let last = last"
       ><span *ngIf="!last; else Last">{{ trait.shortDesc }}, </span>
-      <ng-template #Last>{{ trait.shortDesc }}</ng-template></small
-    >
+      <ng-template #Last>
+        {{ trait.shortDesc }}
+      </ng-template>
+    </small>
     <hr />
     <div class="col mt-1" *ngFor="let trait of race.racialTraits">
       <accordion>
-        <accordion-group heading="{{ trait.name }}">{{
-          trait.description
-        }}</accordion-group>
+        <accordion-group heading="{{ trait.name }}">
+          <div [class.show]="show" [ngClass]="trait.description.length > 100 ? 'hidden-text' : ''"> {{ trait.description }} </div>
+          <button class="btn" (click)="show = !show" style="color: blue" *ngIf="trait.description.length > 100">{{ show ? 'Show less': 'Show More' }}</button>
+        </accordion-group>
       </accordion>
     </div>
   </div>

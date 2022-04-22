@@ -43,9 +43,17 @@
             [ngValue]="asi"
           >
             {{ asi }}
-          </option></ng-container
-        >
+          </option>
+        </ng-container>
       </select>
+      <small class="mt-1">
+        TOTAL:
+        {{
+          character.abilityScoresTotal[i] !== -1
+            ? character.abilityScoresTotal[i]
+            : "--"
+        }}
+      </small>
     </div>
     <hr class="mt-3" />
   </div>
@@ -71,12 +79,24 @@
           character.abilityScores[i] !== -1 ? character.abilityScores[i] : ''
         "
       />
-      <small class="mt-1"
-        >TOTAL:
+      <small class="mt-1">
+        TOTAL:
         {{
-          character.abilityScoresTotal[i] !== -1 ? character.abilityScoresTotal[i] : "--"
-        }}</small
-      >
+          character.abilityScoresTotal[i] !== -1
+            ? character.abilityScoresTotal[i]
+            : "--"
+        }}
+      </small>
+      <ng-container *ngIf="diceRolls[i]">
+        <span *ngFor="let dice of diceRolls[i]">
+          <span class="border mx-1 p-1">{{ dice }}</span>
+        </span>
+        <span class="border mx-1 p-1" style="color: red">{{ diceMinRoll[i] }}</span>
+      </ng-container>
+      <button class="btn btn-outline-primary mt-2" (click)="rollDice(i)">
+        Roll Dice
+      </button>
+
     </div>
     <hr class="mt-3" />
   </div>
@@ -84,7 +104,7 @@
 
 <!-- ? Race ASI Selection -->
 <div class="row">
-  <div class="mt-1" *ngFor="let trait of character.race.racialTraits">
+  <div class="mt-1 mb-1" *ngFor="let trait of character.race.racialTraits">
     <accordion>
       <accordion-group
         heading="{{ trait.name }} {{
@@ -93,7 +113,8 @@
             : ''
         }}"
         *ngIf="trait.name === 'Ability Score Increase'"
-        >{{ trait.description }}
+      >
+        {{ trait.description }}
 
         <ng-container *ngIf="character.race.abilityScoreChoice > 0">
           <ng-container
@@ -171,8 +192,8 @@
               >
                 Charisma
               </option>
-            </select></ng-container
-          >
+            </select>
+          </ng-container>
         </ng-container>
       </accordion-group>
     </accordion>

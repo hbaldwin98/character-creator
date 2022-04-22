@@ -42,9 +42,10 @@
   <hr />
   <div class="mt-1" *ngFor="let trait of selectedRace.racialTraits">
     <accordion>
-      <accordion-group heading="{{ trait.name }}">{{
-        trait.description
-      }}</accordion-group>
+      <accordion-group heading="{{ trait.name }}">
+        <div [class.show]="show" [ngClass]="trait.description.length > 100 ? 'hidden-text' : ''"> {{ trait.description }} </div>
+        <button class="btn" (click)="show = !show" style="color: blue" *ngIf="trait.description.length > 100">{{ show ? 'Show less': 'Show More' }}</button>
+      </accordion-group>
     </accordion>
   </div>
 </div>

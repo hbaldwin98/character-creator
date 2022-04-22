@@ -11,13 +11,13 @@ export class DiceService {
       let rolls = [];
 
       for (let i = 0; i < total; i++) {
-        rolls.push(Math.floor(Math.random() * sides));
+        rolls.push(Math.floor(Math.random() * sides) + 1);
       }
 
       return rolls;
     }
 
-    let diceRoll = Math.floor(Math.random() * sides);
+    let diceRoll = Math.floor(Math.random() * sides) + 1;
 
     return diceRoll;
   }

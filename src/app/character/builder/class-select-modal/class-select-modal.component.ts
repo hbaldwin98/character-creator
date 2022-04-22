@@ -10,6 +10,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 export class ClassSelectModalComponent implements OnInit {
   event: EventEmitter<any> = new EventEmitter();
   charClass!: Class;
+  show: boolean = false;
 
   constructor( private modalService: BsModalService) { }
 

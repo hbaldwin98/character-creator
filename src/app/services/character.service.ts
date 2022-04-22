@@ -80,13 +80,13 @@ export class CharacterService {
           this.character.abilityScoreOverride[i];
       } else {
         this.character.abilityScoresTotal[i] =
-          asi
-          + (this.character.race.abilityScores ? this.character.race.abilityScores[i] : 0)
-          + (this.character.racialAbilityChoices.includes(i) ? 1 : 0);
+          asi +
+          (this.character.race.abilityScores
+            ? this.character.race.abilityScores[i]
+            : 0) +
+          (this.character.racialAbilityChoices.includes(i) ? 1 : 0);
       }
     });
-
-
 
     return this.character;
   }
