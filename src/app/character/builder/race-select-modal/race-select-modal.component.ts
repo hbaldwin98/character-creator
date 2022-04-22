@@ -1,6 +1,6 @@
 import { BsModalService } from 'ngx-bootstrap/modal';
-import { Race } from './../../_models/character/race';
 import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Race } from 'src/app/_models/character/race';
 
 @Component({
   selector: 'app-race-select-modal',

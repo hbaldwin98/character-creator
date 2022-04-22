@@ -1,9 +1,9 @@
-import { Character } from './../../_models/character/character';
-import { ClassSelectModalComponent } from './../class-select-modal/class-select-modal.component';
-import { Class } from './../../_models/character/class';
+import { ClassSelectModalComponent } from '../class-select-modal/class-select-modal.component';
+import { Class } from '../../../_models/character/class';
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { CharacterService } from 'src/app/services/character.service';
+import { Character } from 'src/app/_models/character/character';
 
 @Component({
   selector: 'app-select-class',

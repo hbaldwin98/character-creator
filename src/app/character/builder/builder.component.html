@@ -101,14 +101,18 @@
 </nav>
 
 <div class="container mt-3" style="max-width: 1000px">
-  <div *ngIf="current === 0" class="col-md-10 mx-auto">Home</div>
+  <div *ngIf="current === 0" class="col-md-10 mx-auto">
+    <app-builder-home></app-builder-home>
+  </div>
   <div *ngIf="current === 1" class="col-md-10 mx-auto">
     <app-select-race></app-select-race>
   </div>
   <div *ngIf="current === 2" class="col-md-10 mx-auto">
     <app-select-class></app-select-class>
   </div>
-  <div *ngIf="current === 3" class="col-md-10 mx-auto">Abilities</div>
+  <div *ngIf="current === 3" class="col-md-10 mx-auto">
+    <app-ability-scores></app-ability-scores>
+  </div>
   <div *ngIf="current === 4" class="col-md-10 mx-auto">Description</div>
   <div *ngIf="current === 5" class="col-md-10 mx-auto">Equipment</div>
   <div *ngIf="current === 6" class="col-md-10 mx-auto">Finalize</div>

@@ -8,16 +8,8 @@ export interface Race {
   languages: string[];
   extraLang?: number;
   extraLangChoice?: string[];
-  asi: {
-    str?: number;
-    dex?: number;
-    con?: number;
-    int?: number;
-    wis?: number;
-    cha?: number;
-    choose?: number;
-    choices?: String[];
-  };
+  abilityScores: number[];
+  abilityScoreChoice: number;
   speed: {
     walk?: number;
     burrow?: number;

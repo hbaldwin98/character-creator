@@ -37,25 +37,57 @@ export class CharacterService {
     this.character.class = charClass;
     this.character.maxHP =
       this.character.class.hitDice +
-      this.character.asi.con.mod +
-      ((this.diceService.averageRoll(this.character.class.hitDice) +
-        this.character.asi.con.mod) *
-        (this.character.level -
-        1));
+      (this.character.abilityMods[2] || 0) +
+      (this.diceService.averageRoll(this.character.class.hitDice) +
+        (this.character.abilityMods[2] || 0)) *
+        (this.character.level - 1);
   }
 
   changeLevelBuilder(level: number) {
     if (this.character.hpOveride > 0) {
-      return ;
+      return;
     }
 
     this.character.level = level;
     this.character.maxHP =
-    this.character.class.hitDice +
-    this.character.asi.con.mod +
-    ((this.diceService.averageRoll(this.character.class.hitDice) +
-      this.character.asi.con.mod) *
-      (this.character.level -
-      1));
+      this.character.class.hitDice +
+      (this.character.abilityMods[2] || 0) +
+      (this.diceService.averageRoll(this.character.class.hitDice) +
+        (this.character.abilityMods[2] || 0)) *
+        (this.character.level - 1);
+  }
+
+  updateAbilityScores(stats: number[]): Character {
+    this.character.abilityScores = stats;
+
+    // setting asi modifiers
+    this.character.abilityMods.forEach((mod, i) => {
+      if (this.character.abilityScoreOverride[i] > 0) {
+        this.character.abilityMods[i] = Math.floor(
+          (this.character.abilityScoreOverride[i] - 10) / 2
+        );
+      } else {
+        this.character.abilityMods[i] = Math.floor(
+          (this.character.abilityScores[i] - 10) / 2
+        );
+      }
+    });
+
+    // setting total asi
+    this.character.abilityScores.forEach((asi, i) => {
+      if (this.character.abilityScoreOverride[i] > 0) {
+        this.character.abilityScoresTotal[i] =
+          this.character.abilityScoreOverride[i];
+      } else {
+        this.character.abilityScoresTotal[i] =
+          asi
+          + (this.character.race.abilityScores ? this.character.race.abilityScores[i] : 0)
+          + (this.character.racialAbilityChoices.includes(i) ? 1 : 0);
+      }
+    });
+
+
+
+    return this.character;
   }
 }

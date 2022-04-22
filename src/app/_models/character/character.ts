@@ -27,44 +27,15 @@ export interface ICharacter {
     success: number;
     failure: number;
   };
-  asi: {
-    str: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-    dex: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-    con: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-    int: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-    wis: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-    cha: {
-      val: number;
-      mod: number;
-      save: number;
-      prof: boolean;
-    };
-  };
+
+  abilityScoresTotal: number[];
+  abilityScores: number[];
+  abilityMods: number[];
+  abilitySaves: number[];
+  abilityProf: boolean[];
+  abilityScoreOverride: number[];
+  abilityOtherMods: number[];
+  racialAbilityChoices: number[];
   skills: {
     acrobatics: {
       val: number;
@@ -221,50 +192,16 @@ export class Character implements ICharacter {
     success: 0,
     failure: 0,
   };
-  asi = {
-    str: {
-      order: 1,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-    dex: {
-      order: 2,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-    con: {
-      order: 3,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-    int: {
-      order: 4,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-    wis: {
-      order: 5,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-    cha: {
-      order: 6,
-      val: 10,
-      mod: 0,
-      save: 0,
-      prof: false,
-    },
-  };
+
+  // in order: str-dex-con-int-wis-cha
+  abilityScores = [-1, -1, -1, -1, -1, -1];
+  abilityScoresTotal = [-1, -1, -1, -1, -1, -1];
+  abilityMods = [0, 0, 0, 0, 0, 0];
+  abilitySaves = [0, 0, 0, 0, 0, 0];
+  abilityProf = [false, false, false, false, false, false];
+  abilityScoreOverride = [-1, -1, -1, -1, -1, -1];
+  abilityOtherMods = [-1, -1, -1, -1, -1, -1];
+  racialAbilityChoices: number[] = [];
   skills = {
     acrobatics: {
       val: 0,

@@ -1,6 +1,6 @@
-import { RaceSelectModalComponent } from './../race-select-modal/race-select-modal.component';
-import { Race } from './../../_models/character/race';
-import { CharacterService } from './../../services/character.service';
+import { RaceSelectModalComponent } from '../race-select-modal/race-select-modal.component';
+import { Race } from '../../../_models/character/race';
+import { CharacterService } from '../../../services/character.service';
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 @Component({
@@ -49,6 +49,7 @@ export class SelectRaceComponent implements OnInit {
       if (data === true) {
         this.characterService.setRace(race);
         this.selectedRace = race;
+        this.characterService.character.racialAbilityChoices = [];
       }
     });
   }
