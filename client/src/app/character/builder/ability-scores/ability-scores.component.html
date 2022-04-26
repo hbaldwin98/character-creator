@@ -103,8 +103,8 @@
 </div>
 
 <!-- ? Race ASI Selection -->
-<div class="row">
-  <div class="mt-1 mb-1" *ngFor="let trait of character.race.racialTraits">
+<div class="row mb-4">
+  <div *ngFor="let trait of character.race.racialTraits">
     <accordion>
       <accordion-group
         heading="{{ trait.name }} {{

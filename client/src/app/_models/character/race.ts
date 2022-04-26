@@ -21,7 +21,6 @@ export interface Race {
   description?: string[] | string;
   numFeat?: number;
   feats?: string[];
-  chosenFeats?: string[];
   isHomebrew: boolean;
   proficiency?: {
     armor?: string[];
@@ -30,7 +29,6 @@ export interface Race {
     skill?: {
       num?: number;
       availableChoices?: string[];
-      choices?: string[];
     };
   };
 }

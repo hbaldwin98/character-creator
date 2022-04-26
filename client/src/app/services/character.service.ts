@@ -21,6 +21,7 @@ export class CharacterService {
 
     return json;
   }
+
   async getClasses(): Promise<Class[]> {
     let json = await fetch('assets/classes.json')
       .then((response) => response.json())
@@ -29,10 +30,23 @@ export class CharacterService {
     return json;
   }
 
+  /**
+   * Changes the current player's race.
+   *
+   * @param {Race} race - A race object
+   * @memberof CharacterService
+   */
   setRace(race: Race): void {
     this.character.race = race;
   }
 
+  /**
+   * Sets the character class with the given class and updates character HP with
+   * default average values.
+   *
+   * @param {Class} charClass - Takes a class object
+   * @memberof CharacterService
+   */
   setClass(charClass: Class): void {
     this.character.class = charClass;
     this.character.maxHP =
@@ -43,8 +57,15 @@ export class CharacterService {
         (this.character.level - 1);
   }
 
+  /**
+   * Changes the player level, updating the character's HP with default values. Used in the builder.
+   *
+   * @param {number} level
+   * @return {*}
+   * @memberof CharacterService
+   */
   changeLevelBuilder(level: number) {
-    if (this.character.hpOveride > 0) {
+    if (this.character.hpOverride > 0) {
       return;
     }
 
@@ -57,6 +78,13 @@ export class CharacterService {
         (this.character.level - 1);
   }
 
+  /**
+   * Updates the character's abilities scores, updating the modifiers and total ASIs accordingly.
+   *
+   * @param {number[]} stats - a number array of six positive values
+   * @return {*}  {Character}
+   * @memberof CharacterService
+   */
   updateAbilityScores(stats: number[]): Character {
     this.character.abilityScores = stats;
 

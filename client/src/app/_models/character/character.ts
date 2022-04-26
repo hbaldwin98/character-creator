@@ -13,16 +13,16 @@ export interface ICharacter {
   alignment: string;
   experience?: number;
   milestone: boolean;
-  personality?: string[];
-  ideals?: string[];
-  flaws?: string[];
+  personality: string;
+  ideals: string;
+  flaws: string;
   languages: string[];
   inspiration: boolean;
   profBonus: number;
   maxHP: number;
   currentHP: number;
   tempHP: number;
-  hpOveride: number;
+  hpOverride: number;
   deathSaves: {
     success: number;
     failure: number;
@@ -128,21 +128,10 @@ export interface ICharacter {
   speed: number[];
   armorOverride: boolean;
   armorVal: number;
-  feats?: Feat[];
-  weapons?: Weapon[];
-  armor?: Equipment[];
-  spells?: {
-    cantrip: Spell[];
-    1: Spell[];
-    2: Spell[];
-    3: Spell[];
-    4: Spell[];
-    5: Spell[];
-    6: Spell[];
-    7: Spell[];
-    8: Spell[];
-    9: Spell[];
-  };
+  feats: Feat[];
+  weapons: Weapon[];
+  armor: Equipment[];
+  spells: any[];
   spellClass?: string;
   spellDC?: number;
   spellASI?: string;
@@ -178,16 +167,16 @@ export class Character implements ICharacter {
   alignment = '';
   experience? = 0;
   milestone = true;
-  personality? = [];
-  ideals? = [];
-  flaws? = [];
+  personality = '';
+  ideals = '';
+  flaws = '';
   languages = [];
   inspiration = false;
   profBonus = 0;
   maxHP = 0;
   currentHP = 0;
   tempHP = 0;
-  hpOveride = 0;
+  hpOverride = 0;
   deathSaves = {
     success: 0,
     failure: 0,
@@ -294,21 +283,10 @@ export class Character implements ICharacter {
   speed = [];
   armorOverride = false;
   armorVal = 0;
-  feats? = [];
-  weapons? = [];
-  armor? = [];
-  spells? = {
-    cantrip: [],
-    1: [],
-    2: [],
-    3: [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
-  };
+  feats = [];
+  weapons = [];
+  armor = [];
+  spells = [[], [], [], [], [], [], [], [], [], []];
   spellClass? = '';
   spellDC? = 0;
   spellASI? = '';

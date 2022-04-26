@@ -1,8 +1,7 @@
 export interface ClassFeature {
   name: string;
   description: string;
-  level: number;
+  levelReq: number;
   displayInBuilder: boolean;
   displayInSheet: boolean;
-  displayOrder: number;
 }
