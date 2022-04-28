@@ -1,9 +1,11 @@
 using character_creator.Data;
+using character_creator.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddDbContext<DataContext>(options =>
 {
   options.UseSqlite(config.GetConnectionString("DefaultConnection"));
