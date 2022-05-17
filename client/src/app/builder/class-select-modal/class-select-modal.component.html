@@ -1,0 +1,47 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4><b>CONFIRM CLASS</b></h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="close()"></button>
+  </div>
+  <div class="modal-body">
+    <h2>{{ charClass.name }}</h2>
+    <p>{{ charClass.description }}</p>
+    <small>
+      <b>Hit Die:</b> {{ charClass.hitDice }} <br />
+      <b>Primary Ability:</b> {{ charClass.primaryAbility }} <br />
+      <b>Saves: </b> {{ charClass.saves[0] }} & {{ charClass.saves[1] }}
+    </small>
+    <h5 class="mt-2">Class Features</h5>
+    <small class="text-muted" *ngFor="
+        let feature of charClass.classFeatures | orderBy: 'levelReq';
+        let last = last
+      "><span *ngIf="!last; else Last">{{ feature.name }}, </span>
+      <ng-template #Last>{{ feature.name }}</ng-template>
+    </small>
+    <hr />
+
+    <div class="col mt-1" *ngFor="let feat of charClass.classFeatures | orderBy: 'levelReq'">
+      <accordion>
+        <accordion-group class="mt-1">
+          <button class="btn btn-link btn-block justify-content-between d-flex w-100 shadow-none" accordion-heading
+            type="button">
+            <div class="pull-left">{{ feat.name }}</div>
+
+            <small>Level {{ feat.levelReq }}</small>
+          </button>
+
+          <div [class.show]="show" [ngClass]="feat.description.length > 100 ? 'hidden-text' : ''">
+            {{ feat.description }}
+          </div>
+          <button class="btn" (click)="show = !show" style="color: blue" *ngIf="feat.description.length > 100">
+            {{ show ? "Show less" : "Show More" }}
+          </button>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+  <div class="btn-group modal-footer p-0 m-0">
+    <button class="btn btn-success" (click)="selectClass()">Select</button>
+    <button class="btn btn" (click)="close()">Cancel</button>
+  </div>
+</div>

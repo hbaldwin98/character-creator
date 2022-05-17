@@ -1,5 +1,5 @@
-using character_creator.Data;
-using character_creator.Interfaces;
+using Infrastructure.Data;
+using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

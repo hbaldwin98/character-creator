@@ -1,8 +1,8 @@
-using character_creator.Entities;
-using character_creator.Interfaces;
+using Core.Entities;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace character_creator.Controllers
+namespace API.Controllers
 {
   public class CharacterController : BaseAPIController
   {

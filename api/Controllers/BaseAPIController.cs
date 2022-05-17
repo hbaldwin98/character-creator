@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace character_creator.Controllers;
+namespace API.Controllers;
 
 [ApiController]
 [Route("[controller]")]

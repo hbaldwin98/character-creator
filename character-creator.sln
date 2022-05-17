@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "character-creator", "api\character-creator.csproj", "{6DC99035-93ED-4A03-98B6-725F4C98B69C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "character-creator", "API\character-creator.csproj", "{6DC99035-93ED-4A03-98B6-725F4C98B69C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F9FF0ED8-1097-4454-BBCB-1AC5469F4356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{48903C33-7141-4414-886C-53FD132907BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +22,13 @@ Global
 		{6DC99035-93ED-4A03-98B6-725F4C98B69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC99035-93ED-4A03-98B6-725F4C98B69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC99035-93ED-4A03-98B6-725F4C98B69C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9FF0ED8-1097-4454-BBCB-1AC5469F4356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9FF0ED8-1097-4454-BBCB-1AC5469F4356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9FF0ED8-1097-4454-BBCB-1AC5469F4356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9FF0ED8-1097-4454-BBCB-1AC5469F4356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48903C33-7141-4414-886C-53FD132907BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48903C33-7141-4414-886C-53FD132907BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48903C33-7141-4414-886C-53FD132907BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48903C33-7141-4414-886C-53FD132907BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
+  <div class="row">
+    <ul class="navbar-nav">
+      <li class="mt-1">
+        <button class="nav-link btn p-0" (click)="goBack()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-caret-left-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+            />
+          </svg>
+        </button>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          routerLink="/builder"
+          (click)="setCurrent(0)"
+          [ngClass]="{ active: nav.current === 0 }"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          routerLink="/builder/race"
+          (click)="setCurrent(1)"
+          [ngClass]="{ active: nav.current === 1 }"
+          >1. Race</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          routerLink="/builder/class"
+          (click)="setCurrent(2)"
+          [ngClass]="{ active: nav.current === 2 }"
+          >2. Class</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          routerLink="/builder/abilities"
+          (click)="setCurrent(3)"
+          [ngClass]="{ active: nav.current === 3 }"
+          >3. Ability Scores</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          (click)="setCurrent(4)"
+          [ngClass]="{ active: nav.current === 4 }"
+          >4. Description</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          (click)="setCurrent(5)"
+          [ngClass]="{ active: nav.current === 5 }"
+          >5. Equipment</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link px-0 mx-3"
+          (click)="setCurrent(6)"
+          [ngClass]="{ active: nav.current === 6 }"
+          >Finalize</a
+        >
+      </li>
+      <li class="mt-1">
+        <button class="nav-link btn p-0" (click)="goForward()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-caret-right-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-3" style="max-width: 1000px">
+  <div class="col-md-10 mx-auto">
+    <router-outlet></router-outlet>
+  </div>
+  <!--
+  <div *ngIf="current === 0" class="">
+    <app-builder-home></app-builder-home>
+  </div>
+  <div *ngIf="current === 1" class="col-md-10 mx-auto">
+    <app-select-race></app-select-race>
+  </div>
+  <div *ngIf="current === 2" class="col-md-10 mx-auto">
+    <app-select-class></app-select-class>
+  </div>
+  <div *ngIf="current === 3" class="col-md-10 mx-auto">
+    <app-ability-scores></app-ability-scores>
+  </div>
+  <div *ngIf="current === 4" class="col-md-10 mx-auto">Description</div>
+  <div *ngIf="current === 5" class="col-md-10 mx-auto">Equipment</div>
+  <div *ngIf="current === 6" class="col-md-10 mx-auto">Finalize</div> -->
+</div>
